@@ -1,0 +1,12 @@
+language: python
+python:
+  - "2.7"
+install: "pip install -r requirements.txt"
+script: python main.py
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: public
+  on:
+    branch: master
