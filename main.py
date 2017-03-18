@@ -8,7 +8,7 @@ list={}
 for link in links:
     url=link.find_all('a')[0].get('href') 
     try:
-        response_link=requests.get(url,timeout=20)
+        response_link=requests.get(url,timeout=30)
         code=response_link.status_code
         timeelapsed=response_link.elapsed.total_seconds()
         print(url +' is ' + str(code) + ' in ' + str(timeelapsed) + 's')
