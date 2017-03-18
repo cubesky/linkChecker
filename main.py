@@ -6,7 +6,7 @@ soup = BeautifulSoup(requests.get('https://liyin.date/links').text,'html5lib')
 links=soup.select('li.md-links-item')
 list={}
 for link in links:
-    url=link.find_all('a')[0].get('href')
+    url=link.find_all('a')[0].get('href') 
     try:
         response_link=requests.get(url,timeout=20)
         code=response_link.status_code
