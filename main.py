@@ -21,6 +21,9 @@ for link in links:
     except requests.exceptions.SSLError:
         print(url + ' is SSLError')
         list[url]='sslerror'
+    except: 
+        print(url + ' is UnknownError')
+        list[url]='unknownerror'
 statejson='state('+json.dumps(list)+')'
 os.mkdir('public')
 with open('public/data.jsonp', 'w') as outfile:
