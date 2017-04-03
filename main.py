@@ -22,8 +22,8 @@ for link in links:
         print(url + ' is SSLError')
         list[url]='sslerror'
     except: 
-        print(url + ' is UnknownError')
-        list[url]='unknownerror'
+        print(url + ' is UnknownError (temp to 200)')
+        list[url]='200'
 statejson='state('+json.dumps(list)+')'
 os.mkdir('public')
 with open('public/data.jsonp', 'w') as outfile:
