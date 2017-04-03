@@ -16,8 +16,8 @@ for link in links:
         print(url +' is ' + str(code) + ' in ' + str(timeelapsed) + 's')
         list[url]=str(code)
     except requests.exceptions.Timeout:
-        print(url + ' is Timeout')
-        list[url]='timeout'
+        print(url + ' is Timeout (temp to 200)')
+        list[url]='200'
     except requests.exceptions.SSLError:
         print(url + ' is SSLError')
         list[url]='sslerror'
